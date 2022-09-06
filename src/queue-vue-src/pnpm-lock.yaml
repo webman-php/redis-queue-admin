@@ -40,6 +40,7 @@ specifiers:
   ant-design-vue: 2.2.8
   autoprefixer: ^10.4.0
   axios: ^0.24.0
+  chalk: ^5.0.1
   commitizen: ^4.2.4
   conventional-changelog-cli: ^2.1.1
   cross-env: ^7.0.3
@@ -112,6 +113,7 @@ dependencies:
   '@zxcvbn-ts/core': 1.0.0-beta.0
   ant-design-vue: 2.2.8_076477a87ad5f7673ec470dd8ffa7935
   axios: 0.24.0
+  chalk: 5.0.1
   crypto-js: 4.1.1
   echarts: 5.2.2
   lodash-es: 4.17.21
@@ -3506,6 +3508,11 @@ packages:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
     dev: true
+
+  /chalk/5.0.1:
+    resolution: {integrity: sha512-Fo07WOYGqMfCWHOzSXOt2CxDbC6skS/jO9ynEcmpANMoPrD+W1r1K6Vx7iNm+AQmETU1Xr2t+n8nzkV9t6xh3w==}
+    engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
+    dev: false
 
   /change-case/4.1.2:
     resolution: {integrity: sha512-bSxY2ws9OtviILG1EiY5K7NNxkqg/JnRnFxLtKQ96JaviiIxi7djMrSd0ECT9AC+lttClmYwKw53BWpOMblo7A==}

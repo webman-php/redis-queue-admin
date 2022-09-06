@@ -1,16 +1,5 @@
 <template>
   <div class="p-4">
-    <div class="p-1 breadcrumb">
-      <span>
-        <a href="/#/redis">消息队列</a>
-      </span>
-      <span class="ant-breadcrumb-separator">/</span>
-      <span>
-        <a href="/#/redis/normal">正常队列</a>
-      </span>
-      <span class="ant-breadcrumb-separator">/</span>
-      <span class="text-secondary"> 队列详情 </span>
-    </div>
     <BasicTable @register="registerTable">
       <template #action="{ record }">
         <TableAction
@@ -97,7 +86,7 @@
   });
 </script>
 
-<style scoped>
+<style>
   td {
     text-align: left !important;
   }

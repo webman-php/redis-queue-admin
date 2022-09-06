@@ -1,12 +1,5 @@
 <template>
   <div class="p-4">
-    <div class="p-1 breadcrumb">
-      <span>
-        <a href="/#/redis">消息队列</a>
-      </span>
-      <span class="ant-breadcrumb-separator">/</span>
-      <span class="text-secondary"> 延迟队列 </span>
-    </div>
     <BasicTable @register="registerTable">
       <template #action="{ record }">
         <TableAction
@@ -76,16 +69,16 @@
       function handleView(record: Recordable) {
         let detail = [];
         let message = JSON.parse(record.message);
-        message.time = new Date(message.time * 1000).toLocaleString().replace(/\//g, '-');
-        message.exec_time = new Date((message.time + message.dalay) * 1000)
+        message.exec_time = new Date((message.time + message.delay) * 1000)
           .toLocaleString()
           .replace(/\//g, '-');
+        message.time = new Date(message.time * 1000).toLocaleString().replace(/\//g, '-');
         message.data = JSON.stringify(message.data, null, ' ');
         let map = {
           id: 'id',
           time: '时间',
           delay: '延迟时间',
-          exec_time: '执行时间',
+          exec_time: '预计执行时间',
           attempts: '尝试次数',
           queue: '所属队列',
           data: '参数',
@@ -108,7 +101,7 @@
   });
 </script>
 
-<style scoped>
+<style>
   td {
     text-align: left !important;
   }

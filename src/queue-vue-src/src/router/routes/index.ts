@@ -25,15 +25,6 @@ export const RootRoute: AppRouteRecordRaw = {
   },
 };
 
-export const RedisRoute: AppRouteRecordRaw = {
-  path: '/redis',
-  name: 'Redis',
-  component: () => import('/@/views/redis/index.vue'),
-  meta: {
-    title: 'redis队列',
-  },
-};
-
 export const RedisNormalRoute: AppRouteRecordRaw = {
   path: '/redis/normal',
   name: 'RedisNormal',
@@ -72,7 +63,6 @@ export const RedisFailedRoute: AppRouteRecordRaw = {
 
 // Basic routing without permission
 export const basicRoutes = [
-  RedisRoute,
   RedisNormalRoute,
   RedisNormalViewRoute,
   RedisDelayRoute,
