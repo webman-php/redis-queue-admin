@@ -12,7 +12,7 @@
         />
       </template>
     </BasicTable>
-    <MessageDetailModal @register="register" :minHeight="100" :width="600" />
+    <MessageDetailModal @register="register" :minHeight="200" :width="600" />
   </div>
 </template>
 <script lang="ts">
