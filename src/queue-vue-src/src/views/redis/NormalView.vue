@@ -23,6 +23,7 @@
   import { useRoute } from 'vue-router';
   import { useModal } from '/@/components/Modal';
   import MessageDetailModal from './MessageDetailModal.vue';
+  import DropdownMenuItem from '/@/layouts/default/header/components/user-dropdown/DropMenuItem.vue';
 
   const [register, { openModal }] = useModal();
 
@@ -41,7 +42,7 @@
     },
   ];
   export default defineComponent({
-    components: { BasicTable, TableAction, MessageDetailModal },
+    components: {DropdownMenuItem, BasicTable, TableAction, MessageDetailModal },
     setup() {
       const route = useRoute();
       const queueName = route.params?.id ?? '';

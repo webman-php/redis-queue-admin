@@ -1,9 +1,9 @@
 <?php
 
-use plugin\queue\app\middleware\AccessControl;
+use plugin\admin\api\Middleware;
 
 return [
     '' => [
-        AccessControl::class
+        Middleware::class
     ]
 ];

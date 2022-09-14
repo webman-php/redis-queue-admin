@@ -28,7 +28,7 @@ return [
                 'name' => FailedController::class,
                 'path' => 'failed',
                 'frame_src' => '/app/queue#redis/failed',
-            ],
+            ]
         ]
     ]
 ];
