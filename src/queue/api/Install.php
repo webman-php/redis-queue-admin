@@ -28,7 +28,7 @@ class Install
     {
         // 删除菜单
         foreach (static::getMenus() as $menu) {
-            Menu::delete($menu['name']);
+            Menu::delete($menu['key']);
         }
     }
 
@@ -86,9 +86,9 @@ class Install
      */
     public static function removeUnnecessaryMenus($previous_menus)
     {
-        $menus_to_remove = array_diff(Menu::column($previous_menus, 'name'), Menu::column(static::getMenus(), 'name'));
-        foreach ($menus_to_remove as $name) {
-            Menu::delete($name);
+        $menus_to_remove = array_diff(Menu::column($previous_menus, 'key'), Menu::column(static::getMenus(), 'key'));
+        foreach ($menus_to_remove as $key) {
+            Menu::delete($key);
         }
     }
 
