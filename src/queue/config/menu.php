@@ -7,27 +7,31 @@ use plugin\queue\app\controller\redis\NormalController;
 return [
     [
         'title' => '消息队列',
-        'name' => 'app-queue',
-        'path' => '/app-queue',
-        'icon' => 'ant-design:profile-filled',
+        'key' => 'app-queue',
+        'icon' => 'layui-icon-align-left',
+        'weight' => 0,
+        'type' => 0,
         'children' => [
             [
                 'title' => '正常队列',
-                'name' => NormalController::class,
-                'path' => 'normal',
-                'frame_src' => '/app/queue#redis/normal',
+                'key' => NormalController::class,
+                'href' => '/app/queue#redis/normal',
+                'type' => 1,
+                'weight' => 0,
             ],
             [
                 'title' => '延迟队列',
-                'name' => DelayController::class,
-                'path' => 'delay',
-                'frame_src' => '/app/queue#redis/delay',
+                'key' => DelayController::class,
+                'href' => '/app/queue#redis/delay',
+                'type' => 1,
+                'weight' => 0,
             ],
             [
                 'title' => '失败队列',
-                'name' => FailedController::class,
-                'path' => 'failed',
-                'frame_src' => '/app/queue#redis/failed',
+                'key' => FailedController::class,
+                'href' => '/app/queue#redis/failed',
+                'type' => 1,
+                'weight' => 0,
             ]
         ]
     ]
